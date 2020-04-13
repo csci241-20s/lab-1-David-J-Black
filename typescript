@@ -1,0 +1,445 @@
+Script started on 2020-04-12 16:58:16-0700
+blackd6@linux-01:~/Documents/CS 241$ ls
+typescript
+blackd6@linux-01:~/Documents/CS 241$ mkdir csc[K[K[K[K[K[K[K[K[Kgit clone hp[Kttps://github.com/csci241-19w/lab-[K[K[K[K[K[K[K[K20s/lab-1-David-J-Black
+Cloning into 'lab-1-David-J-Black'...
+remote: Enumerating objects: 14, done.[K
+remote: Counting objects:   7% (1/14)[Kremote: Counting objects:  14% (2/14)[Kremote: Counting objects:  21% (3/14)[Kremote: Counting objects:  28% (4/14)[Kremote: Counting objects:  35% (5/14)[Kremote: Counting objects:  42% (6/14)[Kremote: Counting objects:  50% (7/14)[Kremote: Counting objects:  57% (8/14)[Kremote: Counting objects:  64% (9/14)[Kremote: Counting objects:  71% (10/14)[Kremote: Counting objects:  78% (11/14)[Kremote: Counting objects:  85% (12/14)[Kremote: Counting objects:  92% (13/14)[Kremote: Counting objects: 100% (14/14)[Kremote: Counting objects: 100% (14/14), done.[K
+remote: Compressing objects:  12% (1/8)[Kremote: Compressing objects:  25% (2/8)[Kremote: Compressing objects:  37% (3/8)[Kremote: Compressing objects:  50% (4/8)[Kremote: Compressing objects:  62% (5/8)[Kremote: Compressing objects:  75% (6/8)[Kremote: Compressing objects:  87% (7/8)[Kremote: Compressing objects: 100% (8/8)[Kremote: Compressing objects: 100% (8/8), done.[K
+remote: Total 14 (delta 2), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:   7% (1/14)   Unpacking objects:  14% (2/14)   Unpacking objects:  21% (3/14)   Unpacking objects:  28% (4/14)   Unpacking objects:  35% (5/14)   Unpacking objects:  42% (6/14)   Unpacking objects:  50% (7/14)   Unpacking objects:  57% (8/14)   Unpacking objects:  64% (9/14)   Unpacking objects:  71% (10/14)   Unpacking objects:  78% (11/14)   Unpacking objects:  85% (12/14)   Unpacking objects:  92% (13/14)   Unpacking objects: 100% (14/14)   Unpacking objects: 100% (14/14), done.
+blackd6@linux-01:~/Documents/CS 241$ ls
+lab-1-David-J-Black  typescript
+blackd6@linux-01:~/Documents/CS 241$ cd lab-1-David-J-Black
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ ls
+build.gradle  settings.gradle  src
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git config --global user.name "David Black"
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git config --global user.email blackd6@wwu.edu
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ touch writeup.txt
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git add writeup.txt # run "git help add" for details[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kt
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ get help add
+
+Command 'get' not found, but there are 18 similar ones.
+
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git help add
+[?1049h[22;0;0t[?1h=GIT-ADD(1)                                          Git Manual                                          GIT-ADD(1)[m
+[m
+[1mNAME[0m[m
+       git-add - Add file contents to the index[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mgit[24m [4madd[24m [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p][m
+                 [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]][m
+                 [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize][m
+                 [--chmod=(+|-)x] [--] [<pathspec>...][m
+[m
+[1mDESCRIPTION[0m[m
+       This command updates the index using the current content found in the working tree, to prepare the content[m
+       staged for the next commit. It typically adds the current content of existing paths as a whole, but with[m
+       some options it can also be used to add content with only part of the changes made to the working tree[m
+       files applied, or remove paths that do not exist in the working tree anymore.[m
+[m
+       The "index" holds a snapshot of the content of the working tree, and it is this snapshot that is taken as[m
+       the contents of the next commit. Thus after making any changes to the working tree, and before running the[m
+       commit command, you must use the [1madd[0m command to add any new or modified files to the index.[m
+[m
+       This command can be performed multiple times before a commit. It only adds the content of the specified[m
+       file(s) at the time the add command is run; if you want subsequent changes included in the next commit,[m
+       then you must run [1mgit[0m [1madd[0m again to add the new content to the index.[m
+[m
+       The [1mgit[0m [1mstatus[0m command can be used to obtain a summary of which files have changes that are staged for the[m
+       next commit.[m
+[m
+       The [1mgit[0m [1madd[0m command will not add ignored files by default. If any ignored files were explicitly specified[m
+       on the command line, [1mgit[0m [1madd[0m will fail with a list of ignored files. Ignored files reached by directory[m
+       recursion or filename globbing performed by Git (quote your globs before the shell) will be silently[m
+       ignored. The [4mgit[24m [4madd[24m command can be used to add ignored files with the [1m-f[0m (force) option.[m
+[m
+       Please see [1mgit-commit[0m(1) for alternative ways to add content to a commit.[m
+[m
+[1mOPTIONS[0m[m
+       <pathspec>...[m
+           Files to add content from. Fileglobs (e.g.  [1m*.c[0m) can be given to add all matching files. Also a leading[m
+           directory name (e.g.  [1mdir[0m to add [1mdir/file1[0m and [1mdir/file2[0m) can be given to update the index to match the[m
+           current state of the directory as a whole (e.g. specifying [1mdir[0m will record not just a file [1mdir/file1[0m[m
+           modified in the working tree, a file [1mdir/file2[0m added to the working tree, but also a file [1mdir/file3[0m[m
+           removed from the working tree. Note that older versions of Git used to ignore removed files; use[m
+           [1m--no-all[0m option if you want to add modified or new files but ignore removed ones.[m
+[m
+           For more details about the <pathspec> syntax, see the [4mpathspec[24m entry in [1mgitglossary[0m(7).[m
+[m
+       -n, --dry-run[m
+           Don’t actually add the file(s), just show if they exist and/or will be ignored.[m
+[m
+       -v, --verbose[m
+           Be verbose.[m
+[m
+       -f, --force[m
+           Allow adding otherwise ignored files.[m
+[m
+       -i, --interactive[m
+           Add modified contents in the working tree interactively to the index. Optional path arguments may be[m
+           supplied to limit operation to a subset of the working tree. See “Interactive mode” for details.[m
+[m
+       -p, --patch[m
+           Interactively choose hunks of patch between the index and the work tree and add them to the index. This[m
+[7m Manual page git-add(1) line 1 (press h for help or q to quit)[27m[K[K[K[7m Manual page git-add(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0tblackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git commit -m "Added empty writeup"
+[master 8870a67] Added empty writeup
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 writeup.txt
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git push [K
+Username for 'https://github.com': .git push
+Password for 'https://.git push@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/csci241-20s/lab-1-David-J-Black/'
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git push
+Username for 'https://github.com': David-J-Black
+Password for 'https://David-J-Black@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/csci241-20s/lab-1-David-J-Black/'
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git push
+Username for 'https://github.com': David-J-Black
+Password for 'https://David-J-Black@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/csci241-20s/lab-1-David-J-Black/'
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git push
+Username for 'https://github.com': David  -J-Black
+Password for 'https://David-J-Black@github.com': 
+Counting objects: 2, done.
+Delta compression using up to 8 threads.
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  50% (1/2)   Writing objects: 100% (2/2)   Writing objects: 100% (2/2), 269 bytes | 269.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/csci241-20s/lab-1-David-J-Black
+   a6ccf59..8870a67  master -> master
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacs
+
+end   git add writeup.txt
+git commit -m "Added part 1 (names) to writeup"
+git   git status
+q q
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ 
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git add writeup.txt
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git commit -m "Added part 1 (names) to writeup"
+[master 0de98ed] Added part 1 (names) to writeup
+ 1 file changed, 1 insertion(+)
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ q
+
+Command 'q' not found, but can be installed with:
+
+snap install q                       # version 1.6.3-1, or
+apt  install python-q-text-as-data 
+apt  install python3-q-text-as-data
+
+See 'snap info q' for additional versions.
+
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacs
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacs
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git checkout -b question [K3
+M	writeup.txt
+Switched to a new branch 'question3'
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ Oops already did the change before I created the branch
+
+Command 'Oops' not found, did you mean:
+
+  command 'kops' from snap kops (1.17.0-beta.1)
+
+See 'snap info <snapname>' for additional versions.
+
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git merge
+fatal: No remote for the current branch.
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git merge question3
+Already up to date.
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git delet[K[K[K[K[Krm question [K3
+fatal: pathspec 'question3' did not match any files
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git dl[Kelete question3
+git: 'delete' is not a git command. See 'git --help'.
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git branch -d hotfix[K[K[K[K[K[Kquestion3
+error: Cannot delete branch 'question3' checked out at '/home/blackd6/Documents/CS 241/lab-1-David-J-Black'
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git branch --h[K[K[K--help
+[?1049h[22;0;0t[?1h=GIT-BRANCH(1)                                       Git Manual                                       GIT-BRANCH(1)[m
+[m
+[1mNAME[0m[m
+       git-branch - List, create, or delete branches[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mgit[24m [4mbranch[24m [--color[=<when>] | --no-color] [-r | -a][m
+               [--list] [-v [--abbrev=<length> | --no-abbrev]][m
+               [--column[=<options>] | --no-column] [--sort=<key>][m
+               [(--merged | --no-merged) [<commit>]][m
+               [--contains [<commit]] [--no-contains [<commit>]][m
+               [--points-at <object>] [--format=<format>] [<pattern>...][m
+       [4mgit[24m [4mbranch[24m [--track | --no-track] [-l] [-f] <branchname> [<start-point>][m
+       [4mgit[24m [4mbranch[24m (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>][m
+       [4mgit[24m [4mbranch[24m --unset-upstream [<branchname>][m
+       [4mgit[24m [4mbranch[24m (-m | -M) [<oldbranch>] <newbranch>[m
+       [4mgit[24m [4mbranch[24m (-c | -C) [<oldbranch>] <newbranch>[m
+       [4mgit[24m [4mbranch[24m (-d | -D) [-r] <branchname>...[m
+       [4mgit[24m [4mbranch[24m --edit-description [<branchname>][m
+[m
+[1mDESCRIPTION[0m[m
+       If [1m--list[0m is given, or if there are no non-option arguments, existing branches are listed; the current[m
+       branch will be highlighted with an asterisk. Option [1m-r[0m causes the remote-tracking branches to be listed,[m
+       and option [1m-a[0m shows both local and remote branches. If a [1m<pattern>[0m is given, it is used as a shell wildcard[m
+       to restrict the output to matching branches. If multiple patterns are given, a branch is shown if it[m
+       matches any of the patterns. Note that when providing a [1m<pattern>[0m, you must use [1m--list[0m; otherwise the[m
+       command is interpreted as branch creation.[m
+[m
+       With [1m--contains[0m, shows only the branches that contain the named commit (in other words, the branches whose[m
+       tip commits are descendants of the named commit), [1m--no-contains[0m inverts it. With [1m--merged[0m, only branches[m
+       merged into the named commit (i.e. the branches whose tip commits are reachable from the named commit) will[m
+       be listed. With [1m--no-merged[0m only branches not merged into the named commit will be listed. If the <commit>[m
+       argument is missing it defaults to [1mHEAD[0m (i.e. the tip of the current branch).[m
+[m
+       The command’s second form creates a new branch head named <branchname> which points to the current [1mHEAD[0m, or[m
+       <start-point> if given.[m
+[m
+       Note that this will create the new branch, but it will not switch the working tree to it; use "git checkout[m
+       <newbranch>" to switch to the new branch.[m
+[m
+       When a local branch is started off a remote-tracking branch, Git sets up the branch (specifically the[m
+       [1mbranch.<name>.remote[0m and [1mbranch.<name>.merge[0m configuration entries) so that [4mgit[24m [4mpull[24m will appropriately[m
+       merge from the remote-tracking branch. This behavior may be changed via the global [1mbranch.autoSetupMerge[0m[m
+       configuration flag. That setting can be overridden by using the [1m--track[0m and [1m--no-track[0m options, and changed[m
+       later using [1mgit[0m [1mbranch[0m [1m--set-upstream-to[0m.[m
+[m
+       With a [1m-m[0m or [1m-M[0m option, <oldbranch> will be renamed to <newbranch>. If <oldbranch> had a corresponding[m
+       reflog, it is renamed to match <newbranch>, and a reflog entry is created to remember the branch renaming.[m
+       If <newbranch> exists, -M must be used to force the rename to happen.[m
+[m
+       The [1m-c[0m and [1m-C[0m options have the exact same semantics as [1m-m[0m and [1m-M[0m, except instead of the branch being[m
+       renamed it along with its config and reflog will be copied to a new name.[m
+[m
+       With a [1m-d[0m or [1m-D[0m option, [1m<branchname>[0m will be deleted. You may specify more than one branch for deletion. If[m
+       the branch currently has a reflog then the reflog will also be deleted.[m
+[m
+       Use [1m-r[0m together with [1m-d[0m to delete remote-tracking branches. Note, that it only makes sense to delete[m
+       remote-tracking branches if they no longer exist in the remote repository or if [4mgit[24m [4mfetch[24m was configured[m
+       not to fetch them again. See also the [4mprune[24m subcommand of [1mgit-remote[0m(1) for a way to clean up all obsolete[m
+       remote-tracking branches.[m
+[m
+[7m Manual page git-branch(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0tblackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ g[Kgrade ru[K[K[K[Kle run
+
+Welcome to Gradle 6.1!
+
+Here are the highlights of this release:
+ - Dependency cache is relocatable
+ - Configurable compilation order between Groovy, Java & Scala
+ - New sample projects in Gradle's documentation
+
+For more details see https://docs.gradle.org/6.1/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+
+[2A[1B[1m> Starting Daemon[m[17D[1B[1A> IDLE[0K[6D[1B[2A[1m<[0;1m-------------> 0% INITIALIZING [48ms][m[38D[1B[1m> Evaluating settings[m[21D[1B[2A[1m<[0;1m-------------> 0% INITIALIZING [148ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [248ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [348ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [448ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [548ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [649ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [748ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [848ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [948ms][m[39D[1B[1m> Evaluating settings > Compiling /home/blackd6/Documents/CS 241/lab-1-David-J-Black/settings.gradle into local comp[m[116D[1B[2A[1m<[0;1m-------------> 0% INITIALIZING [1s][m[0K[36D[1B[1m> Evaluating settings[m[0K[21D[1B[1A[1m> Evaluating settings > Compiling /home/blackd6/Documents/CS 241/lab-1-David-J-Black/settings.gradle into local comp[m[116D[1B[1A[1m> Evaluating settings[m[0K[21D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [1s][m[0K[35D[1B[1m> Loading projects[m[0K[18D[1B[1A[1m> root project[m[0K[14D[1B[1A[1m> root project > Compiling /home/blackd6/Documents/CS 241/lab-1-David-J-Black/build.gradle into local compilation ca[m[116D[1B[1A[1m> root project[m[0K[14D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [2s][m[35D[2B[1A[1m> root project > Compiling /home/blackd6/Documents/CS 241/lab-1-David-J-Black/build.gradle into local compilation ca[m[116D[1B[1A[1m> root project[m[0K[14D[1B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [2s][m[37D[1B> IDLE[0K[6D[1B[2A[1m<[0;1m-------------> 0% EXECUTING [2s][m[0K[33D[1B[1m> :compileJava[m[14D[1B[1A[1m> :compileJava > Resolve dependencies of :compileClasspath[m[58D[1B[2A[1m<[0;1m-------------> 0% EXECUTING [3s][m[33D[2B[1A[1m> :compileJava > Resolve dependencies of :compileClasspath > guava-26.0-jre.pom[m[79D[1B[2A[1m<[0;1m-------------> 0% EXECUTING [4s][m[33D[1B[1m> :compileJava > Resolve dependencies of :compileClasspath[m[0K[58D[1B[1A[1m> :compileJava > Resolve dependencies of :compileClasspath > oss-parent-9.pom > 5 KB/6 KB downloaded[m[100D[1B[1A[1m> :compileJava > Resolve dependencies of :compileClasspath[m[0K[58D[1B
+
+
+[4A[1m> :compileJava > Resolve dependencies of :compileClasspath > jsr305-3.0.2.pom[m[77D[1B[1m> :compileJava > Resolve dependencies of :compileClasspath > animal-sniffer-annotations-1.14.pom[m[96D[1B[1m> :compileJava > Resolve dependencies of :compileClasspath > error_prone_annotations-2.1.3.pom[m[94D[1B[1m> :compileJava > Resolve dependencies of :compileClasspath > checker-qual-2.5.2.pom[m[83D[1B[4A> IDLE[0K[6D[1B> IDLE[0K[6D[1B[1m> :compileJava > Resolve dependencies of :compileClasspath > mojo-parent-34.pom > 7 KB/23 KB downloaded[m[103D[1B> IDLE[0K[6D[1B[2A[1m> :compileJava > Resolve dependencies of :compileClasspath[m[0K[58D[2B[2A[1m> :compileJava > Resolve files of :compileClasspath[m[0K[51D[2B[5A[1m<[0;1m-------------> 0% EXECUTING [5s][m[33D[3B[1m> :compileJava[m[0K[14D[2B[5A[1m<[0;1m-------------> 0% EXECUTING [6s][m[33D[5B[5A[1m<[0;1m-------------> 0% EXECUTING [7s][m[33D[5B[5A[1m<[0;1m-------------> 0% EXECUTING [8s][m[33D[5B[5A[1m<[0;32;1m===[0;39;1m----------> 25% EXECUTING [9s][m[34D[3B[1m> :processResources[m[19D[2B[5A[0K
+[1m> Task :run[m
+Hello, world!
+[0K
+[32;1mBUILD SUCCESSFUL[0;39m in 13s
+2 actionable tasks: 2 executed
+[0K
+[0K
+[0K
+[0K
+[0K
+[5A[1m<[0;1m-------------> 0% WAITING[m[26D[1B> IDLE[6D[1B> IDLE[6D[1B> IDLE[6D[1B> IDLE[6D[1B[5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[0m[?12l[?25hblackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacs
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ gralde run --args [K="241"[C[C[C[1P[1P[1@d[1@l
+
+
+[2A[1m<[0;1m-------------> 0% INITIALIZING [5ms][m[37D[1B[1m> Evaluating settings[m[21D[1B[2A[1m<[0;1m-------------> 0% EXECUTING [105ms][m[0K[36D[1B[1m> :compileJava > Resolve dependencies of :compileClasspath[m[58D[1B[2A[1m<[0;1m-------------> 0% EXECUTING [205ms][m[36D[1B[1m> :compileJava[m[0K[14D[1B[2A[1m<[0;32;1m=========[0;39;1m----> 75% EXECUTING [305ms][m[37D[1B[1m> :run[m[0K[6D[1B[2A[0K
+[1m> Task :run[m
+[Ljava.lang.String;@3cd1a2f1
+
+[32;1mBUILD SUCCESSFUL[0;39m in 861ms
+2 actionable tasks: 2 executed
+[0K
+[0K
+[2A[1m<[0;1m-------------> 0% WAITING[m[26D[1B[1m> :run[m[6D[1B[2A[2K[1B[2K[1A[0m[?12l[?25hblackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacs
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacsgradle run --args="241"
+
+
+[2A[1m<[0;1m-------------> 0% INITIALIZING [8ms][m[37D[1B[1m> Evaluating settings[m[21D[1B[2A[1m<[0;1m-------------> 0% EXECUTING [108ms][m[0K[36D[1B[1m> :compileJava[m[0K[14D[1B[2A[0K
+[31;1m> Task :compileJava[0;39m[31m FAILED[39m
+/home/blackd6/Documents/CS 241/lab-1-David-J-Black/src/main/java/lab1/Hello.java:5: error: cannot find symbol
+      if(args.length() == 0)
+             ^
+  symbol:   method length()
+  location: variable args of type String[]
+1 error
+
+[31mFAILURE: [39m[31mBuild failed with an exception.[39m
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+[33m> [39mCompilation failed; see the compiler error output for details.
+
+[0K
+[0K
+[2A[1m<[0;31;1m===[0;39;1m----------> 25% EXECUTING [208ms][m[37D[1B> IDLE[6D[1B[2A* Try:[0K
+Run with [1m--stacktrace[m option to get the stack trace. Run with [1m--info[m or [1m--debug[m option to get more log output. Run with [1m--scan[m to get full insights.
+
+* Get more help at [1mhttps://help.gradle.org[m
+
+[31;1mBUILD FAILED[0;39m in 686ms
+1 actionable task: 1 executed
+[0K
+[0K
+[2A[1m<[0;1m-------------> 0% WAITING[m[26D[1B> IDLE[6D[1B[2A[2K[1B[2K[1A[0m[?12l[?25hblackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacs
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacsgradle run --args="241"
+
+
+[2A[1m<[0;1m-------------> 0% INITIALIZING [9ms][m[37D[1B[1m> Evaluating settings[m[21D[1B[2A[1m<[0;1m-------------> 0% EXECUTING [109ms][m[0K[36D[1B[1m> :compileJava[m[0K[14D[1B[2A[1m<[0;32;1m=========[0;39;1m----> 75% EXECUTING [209ms][m[37D[1B[1m> :run[m[0K[6D[1B[2A[0K
+[1m> Task :run[m
+241
+
+[32;1mBUILD SUCCESSFUL[0;39m in 748ms
+2 actionable tasks: 2 executed
+[0K
+[0K
+[2A[1m<[0;1m-------------> 0% WAITING[m[26D[1B[1m> :run[m[6D[1B[2A[2K[1B[2K[1A[0m[?12l[?25hblackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacs
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacsgradle run --args="241"
+
+
+[2A[1m<[0;1m-------------> 0% EXECUTING [106ms][m[36D[1B[1m> :compileJava[m[14D[1B[2A[1m<[0;32;1m=========[0;39;1m----> 75% EXECUTING [206ms][m[37D[1B[1m> :run[m[0K[6D[1B[2A[0K
+[1m> Task :run[m
+Hello, 241
+
+[32;1mBUILD SUCCESSFUL[0;39m in 797ms
+2 actionable tasks: 2 executed
+[0K
+[0K
+[2A[1m<[0;1m-------------> 0% WAITING[m[26D[1B> IDLE[6D[1B[2A[2K[1B[2K[1A[0m[?12l[?25hblackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ gradle run --args="241"emacs[K
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ emacsgradle run --args="241"
+
+
+[2A[1m<[0;1m-------------> 0% EXECUTING [101ms][m[36D[1B[1m> :compileJava[m[14D[1B[2A[1m<[0;32;1m=========[0;39;1m----> 75% EXECUTING [201ms][m[37D[1B[1m> :run[m[0K[6D[1B[2A[0K
+[1m> Task :run[m
+Hello, 241!
+
+[32;1mBUILD SUCCESSFUL[0;39m in 786ms
+2 actionable tasks: 2 executed
+[0K
+[0K
+[2A[1m<[0;1m-------------> 0% WAITING[m[26D[1B[1m> :run[m[6D[1B[2A[2K[1B[2K[1A[0m[?12l[?25hblackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git add src/main/java/lab1/Hello.java
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git commit -m "Hello now prints command line args[K"
+[question3 edc4706] Hello now prints command line arg
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git push
+fatal: The current branch question3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin question3
+
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git st -[K[K[K[Kpush --set-upstream [K origin master[K[K[K[K[K[Kmaster[K[K[K[K[K[Kquestion3
+Username for 'https://github.com': David-J-Black
+Password for 'https://David-J-Black@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 8 threads.
+Compressing objects:  20% (1/5)   Compressing objects:  40% (2/5)   Compressing objects:  60% (3/5)   Compressing objects:  80% (4/5)   Compressing objects: 100% (5/5)   Compressing objects: 100% (5/5), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 806 bytes | 268.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 2 local objects.[K
+remote: 
+remote: Create a pull request for 'question3' on GitHub by visiting:[K
+remote:      https://github.com/csci241-20s/lab-1-David-J-Black/pull/new/question3[K
+remote: 
+To https://github.com/csci241-20s/lab-1-David-J-Black
+ * [new branch]      question3 -> question3
+Branch 'question3' set up to track remote branch 'question3' from 'origin'.
+blackd6@linux-01:~/Documents/CS 241/lab-1-David-J-Black$ git[K[K[Kexit
+exit
+
+Script done on 2020-04-12 17:31:23-0700
